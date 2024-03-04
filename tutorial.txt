@@ -1,0 +1,32 @@
+// navigation
+- clickable
+<Link href=""> </Link> -> Prefetch automatically
+<Link href="" prefetch={false}> </Link> -> No Prefetch
+
+-as a method/ function (useRouter)
+(useRouter)
+import {useRouter} from "next/navigation"
+const router = useRouter()
+href="/"
+router.push(href)
+router.refresh()
+router.back()
+router.forward()
+router.reload()
+
+(usePathname)
+const pathname = usePathname() // usePathname is a Client Component hook that lets you read the current URL's pathname.
+console.log(pathname)
+
+(useSearchParams)
+const searchParams = useSearchParams() // useSearchParams is a Client Component hook that lets you read the current URL's query string.
+const q = searchParams.get("q") // query
+
+// destructure
+Function ({params, searchParams}){
+    // code
+}
+
+
+
+// Data Fetching
